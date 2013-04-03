@@ -119,6 +119,24 @@ nets = dict(
         VERSION_CHECK=lambda v: True,
     ),
 
+    bytecoin=math.Object(
+        PARENT=networks.nets['bytecoin'],
+        SHARE_PERIOD=10, # seconds
+        CHAIN_LENGTH=24*60*60//10, # shares
+        REAL_CHAIN_LENGTH=24*60*60//10, # shares
+        TARGET_LOOKBEHIND=200, # shares
+        SPREAD=12, # blocks
+        IDENTIFIER='ff37d5b8c6923410'.decode('hex'),
+        PREFIX='ff08c1a53ef629b0'.decode('hex'),
+        P2P_PORT=16333,
+        MIN_TARGET=0,
+        MAX_TARGET=2**256//2**20 - 1,
+        PERSIST=False,
+        WORKER_PORT=6327,
+        BOOTSTRAP_ADDRS=''.split(' '),
+        ANNOUNCE_CHANNEL='',
+        VERSION_CHECK=lambda v: True,
+    ),
 )
 for net_name, net in nets.iteritems():
     net.NAME = net_name
