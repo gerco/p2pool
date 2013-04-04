@@ -134,7 +134,7 @@ nets = dict(
         PERSIST=False,
         WORKER_PORT=6327,
         BOOTSTRAP_ADDRS=''.split(' '),
-        ANNOUNCE_CHANNEL='',
+        ANNOUNCE_CHANNEL='#p2pool-alt',
         VERSION_CHECK=lambda v: True,
     ),
 )
