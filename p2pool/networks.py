@@ -133,7 +133,7 @@ nets = dict(
         MAX_TARGET=2**256//2**20 - 1,
         PERSIST=False,
         WORKER_PORT=6327,
-        BOOTSTRAP_ADDRS=''.split(' '),
+        BOOTSTRAP_ADDRS='seed.bytecoin.cc seed01.bytecoin.cc seed02.bytecoin.cc'.split(' '),
         ANNOUNCE_CHANNEL='#p2pool-alt',
         VERSION_CHECK=lambda v: True,
     ),
